@@ -1,0 +1,22 @@
+name: "Custom OTBR Agent"
+description: "Run OTBR agent with a custom RadioURL (real serial device, no socat)"
+version: "1.0.0"
+slug: "custom_otbr_agent"
+startup: services
+boot: auto
+hassio_api: true
+host_network: true
+privileged:
+  - NET_ADMIN
+  - SYS_RAWIO
+  - SYS_ADMIN
+devices:
+  - /dev/ttyACM0
+  - /dev/serial/by-id
+options:
+  radio_url: "spinel+hdlc+uart:///dev/ttyACM0?uart-baudrate=115200"
+schema:
+  radio_url: str
+arch:
+  - amd64
+  - aarch64

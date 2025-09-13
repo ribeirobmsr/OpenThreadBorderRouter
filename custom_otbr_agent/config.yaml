@@ -1,0 +1,1 @@
+radio_url: "spinel+hdlc+uart:///dev/serial/by-id/usb-Silicon_Labs_Silicon_Labs_EFR32_Multiprotocol_Radio_XXXXX-if00?uart-baudrate=115200"
